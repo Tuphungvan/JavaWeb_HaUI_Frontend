@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Toaster } from "react-hot-toast";
 import { ToastContainer } from "react-toastify";
+import DetailProduct from "./pages/product/DetailProduct/DetailProduct";
 
 const App = () => {
   useEffect(() => {
@@ -19,6 +20,10 @@ const App = () => {
     {
       path: "/",
       element: <Home />,
+    },
+    {
+      path: "/product/:id",
+      element: <DetailProduct />,
     },
   ]);
   return (
