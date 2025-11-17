@@ -35,6 +35,10 @@ const App = () => {
       path: "/search",
       element: <Search />,
     },
+    {
+      path: "/profile",
+      element: <Profile />,
+    },
   ]);
   return (
     <>
