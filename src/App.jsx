@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import { Toaster } from "react-hot-toast";
 import { ToastContainer } from "react-toastify";
 import DetailProduct from "./pages/product/DetailProduct/DetailProduct";
+import Search from "./pages/product/search/Search";
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +25,10 @@ const App = () => {
     {
       path: "/product/:id",
       element: <DetailProduct />,
+    },
+    {
+      path: "/search",
+      element: <Search />,
     },
   ]);
   return (
