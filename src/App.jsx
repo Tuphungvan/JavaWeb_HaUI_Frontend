@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import DetailProduct from "./pages/product/DetailProduct/DetailProduct";
 import Search from "./pages/product/search/Search";
 import FollowingProducts from "./pages/followingProducts/FollowingProducts";
+import CategoryAdminPage from "./pages/admin/CategoryAdminPage";
 
 const App = () => {
   useEffect(() => {
@@ -34,6 +35,14 @@ const App = () => {
     {
       path: "/search",
       element: <Search />,
+    },
+    {
+      path: "/profile",
+      element: <Profile />,
+    },
+    {
+      path: "/admin/categories",
+      element: <CategoryAdminPage />,
     },
   ]);
   return (
