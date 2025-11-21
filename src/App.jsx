@@ -10,6 +10,10 @@ import DetailProduct from "./pages/product/DetailProduct/DetailProduct";
 import Search from "./pages/product/search/Search";
 import FollowingProducts from "./pages/followingProducts/FollowingProducts";
 import CategoryAdminPage from "./pages/admin/CategoryAdminPage";
+import ContactPage from "./pages/contact/ContactPage";
+import MarketSystemPage from "./pages/market-system/MarketSystemPage";
+import BlogList from "./components/blog/BlogList";
+import BlogDetail from "./components/blog/BlogDetail";
 
 const App = () => {
   useEffect(() => {
@@ -39,6 +43,22 @@ const App = () => {
     {
       path: "/profile",
       element: <Profile />,
+    },
+    {
+      path: "/contact",
+      element: <ContactPage />,
+    },
+    {
+      path: "/market-system",
+      element: <MarketSystemPage />,
+    },
+    {
+      path: "/blog",
+      element: <BlogList />,
+    },
+    {
+      path: "/blog/:slug",
+      element: <BlogDetail />,
     },
     {
       path: "/admin/categories",
