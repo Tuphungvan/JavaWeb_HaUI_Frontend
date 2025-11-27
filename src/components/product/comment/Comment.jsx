@@ -98,7 +98,7 @@ const Comment = () => {
         console.log("Product List Response:", response);
 
         const productList = response.data.content || [];
-
+        
         const listReview = await Promise.all(
           productList.map(async (product) => {
             const commentsRaw = await fetchComments(product.id);
@@ -126,10 +126,13 @@ const Comment = () => {
           (review) => review.comments.length > 0
         );
         // Sắp xếp theo thứ tự nhiều đánh giá nhất
-        filteredReviews.sort((a, b) => b.comments.length - a.comments.length);
+        filteredReviews.sort(
+          (a, b) => b.comments.length - a.comments.length
+        );
 
         console.log("Filtered Reviews:", filteredReviews);
         setReviews(filteredReviews.slice(0, 5)); // Lấy 5 sản phẩm có đánh giá nhiều nhất
+
       } catch (error) {
         console.log(error);
       }

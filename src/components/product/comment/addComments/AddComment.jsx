@@ -28,6 +28,7 @@ const AddComment = ({ setIsShowAddComment, productId }) => {
       setComment("");
       setRating(0);
       setIsShowAddComment(false);
+      
     } catch (error) {
       console.error("Lỗi khi gửi đánh giá:", error);
     }
